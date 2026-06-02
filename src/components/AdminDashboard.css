@@ -1,0 +1,128 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  padding-bottom: 4rem;
+}
+
+.admin-header {
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 3rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.admin-header h1 {
+  font-size: 1.8rem;
+  color: white;
+  margin: 0;
+}
+
+.admin-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  border-top: 3px solid var(--accent);
+}
+
+.stat-card h3 {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .highlight {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.admin-table-container {
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+}
+
+.admin-table-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th {
+  padding: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ddd;
+}
+
+.admin-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-admin {
+  background: rgba(229, 9, 20, 0.2);
+  color: #e50914;
+  border: 1px solid #e50914;
+}
+
+.badge-user {
+  background: rgba(255, 255, 255, 0.1);
+  color: #aaa;
+}
+
+.badge-kid {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  border: 1px solid #2ecc71;
+}
+
+.delete-user-btn {
+  background: transparent;
+  color: #e50914;
+  border: 1px solid #e50914;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.delete-user-btn:hover {
+  background: #e50914;
+  color: white;
+}

@@ -1,0 +1,67 @@
+.media-grid-section {
+  margin: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.8rem;
+  margin-left: 2rem;
+}
+
+.media-grid {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  padding: 0 2rem 2rem 2rem;
+  scroll-behavior: smooth;
+}
+
+/* Horizontal scrollbar styling for the rows */
+.media-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.media-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.media-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.media-grid:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.media-grid .media-card {
+  flex: 0 0 220px; /* Fixed width for horizontal scrolling cards */
+}
+
+/* Styles for wrapping grid (used in Search Results) */
+.media-grid.media-grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  overflow-x: visible;
+  padding: 0;
+  gap: 2rem;
+}
+
+.media-grid-wrap .media-card {
+  flex: none; /* Override horizontal lock */
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-left: 1rem;
+  }
+  .media-grid {
+    padding: 0 1rem 1rem 1rem;
+  }
+  .media-grid .media-card {
+    flex: 0 0 160px;
+  }
+  .media-grid.media-grid-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+}
