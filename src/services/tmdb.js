@@ -103,3 +103,21 @@ export const getWatchProviders = async (id, type = 'movie') => {
     return [];
   }
 };
+
+export const getTvDetails = async (id) => {
+  try {
+    return await fetchFromTMDB(`/tv/${id}`);
+  } catch (error) {
+    console.error("Failed to fetch TV details", error);
+    return null;
+  }
+};
+
+export const getTvSeason = async (id, seasonNumber) => {
+  try {
+    return await fetchFromTMDB(`/tv/${id}/season/${seasonNumber}`);
+  } catch (error) {
+    console.error("Failed to fetch TV season", error);
+    return null;
+  }
+};
