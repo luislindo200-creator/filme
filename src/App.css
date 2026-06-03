@@ -82,6 +82,9 @@
 }
 
 @media (max-width: 768px) {
+  .app-container {
+    padding-bottom: 80px;
+  }
   .hero-title {
     font-size: 2.5rem;
   }

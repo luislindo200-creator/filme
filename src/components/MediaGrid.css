@@ -51,6 +51,9 @@
 }
 
 @media (max-width: 768px) {
+  .media-grid::-webkit-scrollbar {
+    display: none;
+  }
   .section-title {
     margin-left: 1rem;
   }

@@ -44,3 +44,15 @@
 .search-bar input:focus {
   border-color: var(--accent);
 }
+
+@media (max-width: 768px) {
+  .nav-links, .profile-btn {
+    display: none !important;
+  }
+  .navbar {
+    padding: 0.8rem 0;
+  }
+  .search-bar input {
+    width: 180px;
+  }
+}
