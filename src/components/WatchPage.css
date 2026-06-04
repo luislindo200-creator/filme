@@ -95,11 +95,24 @@
 }
 
 @media (max-width: 768px) {
+  .watch-header {
+    position: relative;
+    padding: 1rem 1rem 0.5rem 1rem;
+    background: var(--bg-dark);
+  }
   .video-container {
-    height: 40vh;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .watch-details {
+    padding: 1.5rem 1rem;
   }
   .watch-details h1 {
     font-size: 1.8rem;
+  }
+  .tv-selector-container {
+    margin: 1rem 0;
+    padding: 1rem;
   }
 }
 
