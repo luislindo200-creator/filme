@@ -256,6 +256,14 @@ function App() {
           }} 
           onBack={() => setCurrentView('home')} 
         />
+      ) : currentView === 'watch' && selectedMedia ? (
+        <WatchPage 
+          item={selectedMedia}
+          onBack={handleBackFromWatch}
+          myList={applyKidFilter(myList)}
+          onAddToList={handleAddToList}
+          onRemoveFromList={handleRemoveFromList}
+        />
       ) : searchQuery.trim() ? (
         <div className="search-results-section" style={{ paddingTop: '80px', minHeight: '80vh' }}>
           {isSearching ? (
@@ -268,14 +276,6 @@ function App() {
              </div>
           )}
         </div>
-      ) : currentView === 'watch' && selectedMedia ? (
-        <WatchPage 
-          item={selectedMedia}
-          onBack={handleBackFromWatch}
-          myList={applyKidFilter(myList)}
-          onAddToList={handleAddToList}
-          onRemoveFromList={handleRemoveFromList}
-        />
       ) : currentView === 'admin' && (currentUser?.isAdmin || currentUser?.email === 'admin@voyo.com') ? (
         <AdminDashboard onBack={() => setCurrentView('profile')} />
       ) : currentView === 'profile' ? (
